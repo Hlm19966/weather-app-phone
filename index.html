@@ -4,28 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <title>Document</title>
 </head>
 <body>
     
     <div class="data-app">
-    <form class="search-form">
-      <input type="search" placeholder="Enter a city"  class="search-form-input" />
+    <form class="search-form" id="search-form">
+      <input type="search" placeholder="Enter a city"  class="search-form-input"  id="search-two"/>
      <input type="submit" value="search" class="search-form-button" />
     </form>
         <header>
- <h1>13°</h1>
- <p>seoul<br />cloudy</p>
- <p>18:45</p>
+ <h1 id="temperature">13°</h1>
+ <div id="heading">seoul</div><div id="description">cloudy</div>
+ <p id="time">18:45</p>
         </header>
  <div class="forcast">
 <div class="fourday">4-day forecast
-<div class="forcast-app-one">Today Clear <span>19° / 8°</span></div>
-<div class="forcast-app-two">Tommorow Clear <span>22° / 6°</span></div>
-<div class="forcast-app-three">Mon Cloudy <span>24° / 7°</span></div>
-<button>3-day forcast</button>
+<div class="forcast-app-one">sat<span id="condition">Clear</span><span class="set-temp">19° / 8°</span></div>
+<div class="forcast-app-two">Sun<span id="condition">Clear</span> <span>22° / 6°</span></div>
+<div class="forcast-app-three">Mon<span id="condition">Cloudy</span> <span>24° / 7°</span></div>
+<button id="button">3-day forcast</button>
 </div>
 </div>
  </div>
 </body>
+<script src="index.js"></script>
 </html>
